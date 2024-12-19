@@ -19,7 +19,7 @@ const AccordionTemplate = ({ data }) => {
           }}
         >
           <img
-            src={expanded ? "../../public/assets/images/icon-minus.svg" : '../../public/assets/images/icon-plus.svg'}
+            src={expanded ? "./images/icon-minus.svg" : './images/icon-plus.svg'}
             alt={expanded ? 'Collapse' : 'Expand'}
           />
         </span>
