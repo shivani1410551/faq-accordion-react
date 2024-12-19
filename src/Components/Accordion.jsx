@@ -2,8 +2,8 @@
 import { AccordionData } from './AccordionData'
 import AccordionTemplate from './AccordionTemplate'
 const Accordion = () => {
-  const heroAccordion = AccordionData.map((data) => {
-    return <AccordionTemplate data={data} key={data.question} />
+  const heroAccordion = AccordionData.map((data ,index) => {
+    return <AccordionTemplate data={data} key={data.question} isDefaultOpen={index===0}  />
   })
   return (
     <main className='accordion-main'>

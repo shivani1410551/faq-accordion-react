@@ -1,9 +1,7 @@
 import  { useState } from 'react';
 
-
-
-const AccordionTemplate = ({ data }) => {
-  const [expanded, setExpanded] = useState(false);
+const AccordionTemplate = ({ data ,isDefaultOpen }) => {
+  const [expanded, setExpanded] = useState(isDefaultOpen);
 
   const toggleAccordion = () => setExpanded(!expanded);
 
@@ -21,7 +19,7 @@ const AccordionTemplate = ({ data }) => {
           }}
         >
           <img
-            src={expanded ? "./images/icon-minus.svg" : "./images/icon-minus.svg"}
+            src={expanded ? "./images/icon-minus.svg" : "./images/icon-plus.svg"}
             alt={expanded ? 'Collapse' : 'Expand'}
           />
         </span>
