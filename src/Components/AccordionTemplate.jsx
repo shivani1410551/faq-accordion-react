@@ -8,7 +8,7 @@ const AccordionTemplate = ({ data ,isDefaultOpen }) => {
   return (
     <div className="accordion-item">
       <div className="accordion-header">
-        <h3 className="question">{data.question}</h3>
+        <h2 className="question">{data.question}</h2>
         <span
           className="toggle-icon"
           onClick={toggleAccordion}
