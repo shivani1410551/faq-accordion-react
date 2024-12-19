@@ -203,7 +203,7 @@ justify-content:space-between;
   }
 
   .background {
-    background: url("./images/background-pattern-mobile.svg");
+    background: url("../images/background-pattern-mobile.svg");
     background-repeat:no-repeat;
     background-size: cover;
   }
