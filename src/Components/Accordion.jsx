@@ -1,5 +1,4 @@
-import React from 'react'
-import iconStar from "../../public/assets/images/icon-star.svg"
+
 import { AccordionData } from './AccordionData'
 import AccordionTemplate from './AccordionTemplate'
 const Accordion = () => {
@@ -9,7 +8,7 @@ const Accordion = () => {
   return (
     <main className='accordion-main'>
       <div className="title">
-        <img src={iconStar }  alt="icon-star" />
+        <img src="./images/icon-star.svg"  alt="icon-star" />
         <h1>FAQs</h1>
       </div>
 {heroAccordion}
