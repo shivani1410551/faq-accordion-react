@@ -1,12 +1,5 @@
-import React from "react";
-
-type AccordionTemplateProps = {
-  data: { question: string; answer: string };
-  index: number;
-  handleSelection: (index: number) => void;
-  selectedId: number | null;
-}
-const AccordionTemplate:React.FC<AccordionTemplateProps>= ({ data ,index,handleSelection,selectedId}) => {
+import PropTypes from "prop-types";
+const AccordionTemplate= ({ data ,index,handleSelection,selectedId}) => {
 
   return (
 <div className="accordion-item" key={index}>
@@ -35,6 +28,18 @@ const AccordionTemplate:React.FC<AccordionTemplateProps>= ({ data ,index,handleS
       {selectedId === index && <div className="answer">{data.answer}</div>}
     </div>
   );
+};
+
+
+
+AccordionTemplate.propTypes = {
+  data: PropTypes.shape({
+    question: PropTypes.string.isRequired,
+    answer: PropTypes.string.isRequired,
+  }).isRequired,
+  index: PropTypes.number.isRequired,
+  handleSelection: PropTypes.func.isRequired,
+  selectedId: PropTypes.number,
 };
 
 export default AccordionTemplate;
